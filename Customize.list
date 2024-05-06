@@ -1,9 +1,50 @@
-# 内容：中国IP地址段ipv4
-# 来源：https://github.com/17mon/china_ip_list/
+# 内容：自定义IP/域名
+# 来源：
 # 更新：2024-01-23 22:08:35
 # 数量：6791条
 
-IP-CIDR,1.0.1.0/24,no-resolve
-IP-CIDR,1.0.2.0/23,no-resolve
-IP-CIDR,1.0.8.0/21,no-resolve
-IP-CIDR,1.0.32.0/19,no-resolve
+# -------规则示意-------
+# DOMAIN-SUFFIX：域名后缀匹配
+# DOMAIN：域名匹配
+# DOMAIN-KEYWORD：域名关键字匹配
+# IP-CIDR：IP 段匹配
+# SRC-IP-CIDR：源 IP 段匹配
+# GEOIP：GEOIP 数据库（国家代码）匹配
+# DST-PORT：目标端口匹配
+# SRC-PORT：源端口匹配
+# PROCESS-NAME：源进程名匹配
+# RULE-SET：Rule Provider 规则匹配
+# MATCH：全匹配
+# https://wiki.metacubex.one/config/rules/#uid
+
+# 自定义IP
+IP-CIDR,198.18.0.0/16,no-resolve
+IP-CIDR,224.0.0.0/4,no-resolve
+IP-CIDR6,::1/128,no-resolve
+IP-CIDR6,fc00::/7,no-resolve
+
+# 直连列表
+
+# MyList
+DOMAIN-SUFFIX,13th.tech
+DOMAIN-SUFFIX,423down.com
+DOMAIN-SUFFIX,bokecc.com
+
+# CN域名直连(中国|公司|网络)
+DOMAIN-SUFFIX,cn
+DOMAIN-SUFFIX,gov.cn
+
+# 中国国内常见域名关键词直连
+DOMAIN-KEYWORD,360buy
+DOMAIN-KEYWORD,alicdn
+DOMAIN-KEYWORD,alimama
+
+# 域名直连
+DOMAIN-SUFFIX,360.com
+DOMAIN-SUFFIX,360kuai.com
+DOMAIN-SUFFIX,360safe.com
+DOMAIN-SUFFIX,dhrest.com
+DOMAIN-SUFFIX,qhres.com
+DOMAIN-SUFFIX,qhstatic.com
+DOMAIN-SUFFIX,qhupdate.com
+DOMAIN-SUFFIX,so.com
