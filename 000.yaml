@@ -15,20 +15,8 @@ proxy-providers:
       url: https://www.gstatic.com/generate_204
       interval: 600
 
-#  🛫 我的机场 2:
-    type: http
-    url: "https://example.com/xxx/xxx&flag=clash"
-    path: ./proxies/airport2.yaml
-    interval: 86400
-    filter: "(?i)港|hk|hongkong|hong kong|台|tw|taiwan|日本|jp|japan|新|sg|singapore|美|us|unitedstates|united states"
-    exclude-filter: "高倍|×10"
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 600
-
 # 单个出站代理节点（以 vless 为例）
-proxies:
+#proxies:
   - name: 🆓 免费节点
     type: vless
     server: example.com
