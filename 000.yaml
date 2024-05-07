@@ -46,8 +46,13 @@ proxy-groups:
   - {name: 🇹🇼 台湾节点, type: load-balance, strategy: consistent-hashing, include-all-providers: true, filter: "(?i)台|tw|taiwan"}
   # 若有多个机场，可以使用 `include-all-providers: true` 代替 `use: [🛫 我的机场 1, 🛫 我的机场 2, ...]`
   - {name: 🇯🇵 日本节点, type: url-test, tolerance: 50, include-all-providers: true, filter: "(?i)日本|jp|japan"}
+  - {name: KR 韩国节点, type: url-test, tolerance: 50, include-all-providers: true, filter: "(?i)韩国|kr|Korea"}
   - {name: 🇸🇬 新加坡节点, type: url-test, tolerance: 50, include-all-providers: true, filter: "(?i)新|sg|singapore"}
   - {name: 🇺🇸 美国节点, type: url-test, tolerance: 50, include-all-providers: true, filter: "(?i)美|us|unitedstates|united states"}
+  - {name: AU 澳大利亚, type: url-test, tolerance: 50, include-all-providers: true, filter: "(?i)澳大利亚|au|Australia"}
+  - {name: FR 法国节点, type: url-test, tolerance: 50, include-all-providers: true, filter: "(?i)法国|fr|France"}
+  - {name: DE 德国节点, type: url-test, tolerance: 50, include-all-providers: true, filter: "(?i)德国|de|Germany"}
+  - {name: GB 英国节点, type: url-test, tolerance: 50, include-all-providers: true, filter: "(?i)英国|gb|Gbr"}
 #  - {name: 所有节点, type: url-test, tolerance: 50, include-all-providers: true,}
 # 规则集（yaml 文件每天自动更新）
 rule-providers:
