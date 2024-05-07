@@ -26,6 +26,8 @@ proxy-groups:
   - {name: 🐟 漏网之鱼, type: select, proxies: [🚀 节点选择, 🎯 全球直连]}
   - {name: 🇨🇳 直连域名, type: select, proxies: [🎯 全球直连, 🚀 节点选择]}
   - {name: 🇨🇳 直连 IP, type: select, proxies: [🎯 全球直连, 🚀 节点选择]}
+    # 若使用 ShellCrash，由于无法判断本机进程（默认 `find-process-mode: off`），需删除此条 `🖥️ 直连软件`
+  - {name: 🖥️ 直连软件, type: select, proxies: [🎯 全球直连]}
   - {name: 🛑 广告拦截, type: select, proxies: [REJECT]}
   - {name: 🎯 全球直连, type: select, proxies: [DIRECT]}
 
@@ -88,9 +90,9 @@ rule-providers:
     
 # 规则
 rules:
+  # 若使用 ShellCrash，由于无法判断本机进程（默认 `find-process-mode: off`），需删除此条 `RULE-SET`
   - RULE-SET,applications,🖥️ 直连软件
   - RULE-SET,ads,🛑 广告拦截
-  # 若使用 ShellCrash，由于无法判断本机进程（默认 `find-process-mode: off`），需删除此条 `RULE-SET`
   - RULE-SET,cnip,🇨🇳 直连 IP
-  - RULE-SET,Customize,🇨🇳 直连域名  
+  - RULE-SET,Customize,🇨🇳 直连域名
   - MATCH,🐟 漏网之鱼
