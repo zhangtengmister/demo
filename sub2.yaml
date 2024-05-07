@@ -81,7 +81,7 @@ rule-providers:
     url: "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/clash-ruleset/microsoft-cn.list"
     interval: 86400
 
-  apple-cn:
+#  apple-cn:
     type: http
     behavior: domain
     format: text
@@ -89,7 +89,7 @@ rule-providers:
     url: "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/clash-ruleset/apple-cn.list"
     interval: 86400
 
-  google-cn:
+#  google-cn:
     type: http
     behavior: domain
     format: text
@@ -97,7 +97,7 @@ rule-providers:
     url: "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/clash-ruleset/google-cn.list"
     interval: 86400
 
-  games-cn:
+#  games-cn:
     type: http
     behavior: domain
     format: text
@@ -178,13 +178,13 @@ rules:
   # 为过滤 P2P 流量（BT 下载），可添加一条 `DST-PORT` 规则（ShellCrash 会默认开启“只代理常用端口”，可忽略此项）
   - DST-PORT,6881-6889,🎯 全球直连
   - RULE-SET,private,🔒 私有网络
-  - RULE-SET,microsoft-cn,Ⓜ️ 微软服务
-  - RULE-SET,apple-cn,🍎 苹果服务
-  - RULE-SET,google-cn,🇬 谷歌服务
-  - RULE-SET,games-cn,🎮 游戏服务
+#  - RULE-SET,microsoft-cn,Ⓜ️ 微软服务
+#  - RULE-SET,apple-cn,🍎 苹果服务
+#  - RULE-SET,google-cn,🇬 谷歌服务
+#  - RULE-SET,games-cn,🎮 游戏服务
   - RULE-SET,ai,🤖 人工智能
   - RULE-SET,networktest,📈 网络测试
-  - RULE-SET,proxy,🪜 代理域名
+#  - RULE-SET,proxy,🪜 代理域名
   - RULE-SET,cn,🇨🇳 直连域名
   - RULE-SET,Customize,🇨🇳 直连域名
 #  - RULE-SET,telegramip,📲 电报消息,no-resolve
