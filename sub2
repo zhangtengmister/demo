@@ -55,7 +55,7 @@ proxy-groups:
   - {name: 🇬🇧 英国节点, type: url-test, tolerance: 300, include-all-providers: true, filter: "(?i)英国|Gbr"}
 #  - {name: 所有节点, type: url-test, tolerance: 50, include-all-providers: true,}
 # 规则集（yaml 文件每天自动更新）
-rule-providers:
+#rule-providers:
   #广告拦截
   ads:
     type: http
@@ -100,7 +100,16 @@ rule-providers:
     interval: 86400
 
 # 规则
-ules:
+rules:
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list
+https://raw.githubusercontent.com/zhangtengmister/demo/main/Customize.list
 enable_rule_generator=true
 overwrite_original_rules=true
 #rules:
