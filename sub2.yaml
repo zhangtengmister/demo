@@ -133,7 +133,7 @@ rule-providers:
     format: text
     path: ./rules/Customize.list
     url: "https://raw.githubusercontent.com/zhangtengmister/demo/main/Customize.list"
-    interval: 600
+    interval: 300
 
 # 规则
 rules:
