@@ -66,7 +66,7 @@ rule-providers:
     type: http
     behavior: domain
     format: text
-    path: ./rules/cnip.list
+    path: ./rules/Customize.list
     url: "https://raw.githubusercontent.com/zhangtengmister/demo/main/Customize.list"
     interval: 86400
     
@@ -75,4 +75,5 @@ rules:
   - RULE-SET,ads,🛑 广告拦截
   # 若使用 ShellCrash，由于无法判断本机进程（默认 `find-process-mode: off`），需删除此条 `RULE-SET`
   - RULE-SET,cnip,🇨🇳 直连 IP
+  - RULE-SET,Customize,🇨🇳 直连域名  
   - MATCH,🐟 漏网之鱼
