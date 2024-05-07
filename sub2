@@ -170,7 +170,10 @@ rule-providers:
     interval: 86400
 
 # 规则
-rules:
+ules:
+enable_rule_generator=true
+overwrite_original_rules=true
+#rules:
   - RULE-SET,ads,🛑 广告拦截
   # 若使用 ShellCrash，由于无法判断本机进程（默认 `find-process-mode: off`），需删除此条 `RULE-SET`
   - RULE-SET,applications,🖥️ 直连软件
