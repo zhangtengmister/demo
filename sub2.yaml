@@ -90,7 +90,6 @@ rule-providers:
     
 # 规则
 rules:
-  # 若使用 ShellCrash，由于无法判断本机进程（默认 `find-process-mode: off`），需删除此条 `RULE-SET`
   - RULE-SET,applications,🖥️ 直连软件
   - RULE-SET,ads,🛑 广告拦截
   - RULE-SET,cnip,🇨🇳 直连 IP
