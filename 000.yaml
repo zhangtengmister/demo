@@ -52,7 +52,7 @@ proxy-groups:
   - {name: 🇦🇺 澳大利亚, type: url-test, tolerance: 50, include-all-providers: true, filter: "(?i)澳大利亚|au|Australia"}
   - {name: 🇪🇷 法国节点, type: url-test, tolerance: 50, include-all-providers: true, filter: "(?i)法国|fr|France"}
   - {name: 🇩🇪 德国节点, type: url-test, tolerance: 50, include-all-providers: true, filter: "(?i)德国|de|Germany"}
-  - {name: 🇬🇧 英国节点, type: url-test, tolerance: 50, include-all-providers: true, filter: "(?i)英国|gb|Gbr"}
+  - {name: 🇬🇧 英国节点, type: url-test, tolerance: 50, include-all-providers: true, filter: "(?i)英国|Gbr"}
 #  - {name: 所有节点, type: url-test, tolerance: 50, include-all-providers: true,}
 # 规则集（yaml 文件每天自动更新）
 rule-providers:
