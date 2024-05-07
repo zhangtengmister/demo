@@ -78,12 +78,12 @@ rule-providers:
     url: "https://raw.githubusercontent.com/zhangtengmister/demo/main/Customize.list"
     interval: 86400
     
-  Customize:
+  ChinaDomain:
     type: http
     behavior: domain
     format: text
-    path: ./rules/Customize.list
-    url: "https://raw.githubusercontent.com/zhangtengmister/demo/main/Customize.list"
+    path: ./rules/ChinaDomain:.list
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list"
     interval: 86400
     
 # 规则
@@ -91,5 +91,6 @@ rules:
   - RULE-SET,applications,🖥️ 直连软件
   - RULE-SET,ads,🛑 广告拦截
   - RULE-SET,Customize,🇨🇳 直连域名
+  - RULE-SET,ChinaDomain,🇨🇳 直连域名
   - RULE-SET,cnip,🇨🇳 直连 IP
   - MATCH,🐟 漏网之鱼
