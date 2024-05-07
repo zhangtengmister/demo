@@ -90,6 +90,6 @@ rule-providers:
 rules:
   - RULE-SET,applications,🖥️ 直连软件
   - RULE-SET,ads,🛑 广告拦截
-  - RULE-SET,cnip,🇨🇳 直连 IP
   - RULE-SET,Customize,🇨🇳 直连域名
+  - RULE-SET,cnip,🇨🇳 直连 IP
   - MATCH,🐟 漏网之鱼
