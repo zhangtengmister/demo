@@ -46,6 +46,14 @@ proxy-groups:
 #  - {name: 所有节点, type: url-test, tolerance: 50, include-all-providers: true,}
 # 规则集（yaml 文件每天自动更新）
 rule-providers:
+ # 若使用 ShellCrash，由于无法判断本机进程（默认 `find-process-mode: off`），需删除此条 `applications`
+  applications:
+    type: http
+    behavior: classical
+    format: text
+    path: ./rules/applications.list
+    url: "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/clash-ruleset/applications.list"
+    interval: 86400
   ads:
     type: http
     behavior: domain
@@ -70,8 +78,17 @@ rule-providers:
     url: "https://raw.githubusercontent.com/zhangtengmister/demo/main/Customize.list"
     interval: 86400
     
+  Customize:
+    type: http
+    behavior: domain
+    format: text
+    path: ./rules/Customize.list
+    url: "https://raw.githubusercontent.com/zhangtengmister/demo/main/Customize.list"
+    interval: 86400
+    
 # 规则
 rules:
+  - RULE-SET,applications,🖥️ 直连软件
   - RULE-SET,ads,🛑 广告拦截
   # 若使用 ShellCrash，由于无法判断本机进程（默认 `find-process-mode: off`），需删除此条 `RULE-SET`
   - RULE-SET,cnip,🇨🇳 直连 IP
