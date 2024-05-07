@@ -78,7 +78,7 @@ rule-providers:
     url: "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/clash-ruleset/private.list"
     interval: 86400
 
-#  ai:
+  ai:
     type: http
     behavior: domain
     format: text
