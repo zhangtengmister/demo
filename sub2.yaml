@@ -47,7 +47,6 @@ proxy-groups:
 #  - {name: 所有节点, type: url-test, tolerance: 50, include-all-providers: true,}
 # 规则集（yaml 文件每天自动更新）
 rule-providers:
- # 若使用 ShellCrash，由于无法判断本机进程（默认 `find-process-mode: off`），需删除此条 `applications`
   applications:
     type: http
     behavior: classical
