@@ -154,6 +154,13 @@ rules:
 #  - RULE-SET,Customize,🇨🇳 直连域名
 #  - RULE-SET,privateip,🔒 私有网络,no-resolve
 #  - RULE-SET,cnip,🇨🇳 直连 IP
+  - RULE-SET,ChinaIpP,DIRECT
+  - RULE-SET,ChinaCompanyIp,DIRECT
+  - RULE-SET,BanProgramAD,DIRECT
+  - RULE-SET,BanAD,DIRECT
+  - RULE-SET,ChinaMedia,DIRECT
+  - RULE-SET,UnBan,DIRECT
+  - RULE-SET,LocalAreaNetwork,DIRECT
   - RULE-SET,GoogleCNProxyIP,🚀 节点选择,no-resolve
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🚀 节点选择
   - DOMAIN-SUFFIX,services.googleapis.cn,🚀 节点选择
