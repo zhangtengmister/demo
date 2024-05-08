@@ -44,7 +44,7 @@ rule-providers:
     type: http
     path: ./rule1/GoogleCNProxyIP.list
     url: "https://raw.staticdn.net/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleCNProxyIP.list"
-    interval: 600
+    interval: 3600
     proxy: DIRECT
     behavior: classical
     format: text
@@ -53,7 +53,7 @@ rule-providers:
     type: http
     path: ./rule1/LocalAreaNetwork.list
     url: "https://raw.staticdn.net/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list"
-    interval: 600
+    interval: 3600
     proxy: DIRECT
     behavior: classical
     format: text
@@ -71,7 +71,7 @@ rule-providers:
     type: http
     path: ./rule1/UnBan.list
     url: "https://raw.staticdn.net/ACL4SSR/ACL4SSR/master/Clash/UnBan.list"
-    interval: 600
+    interval: 3600
     proxy: DIRECT
     behavior: classical
     format: text
@@ -80,7 +80,7 @@ rule-providers:
     type: http
     path: ./rule1/ChinaDomain.list
     url: "https://raw.staticdn.net/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list"
-    interval: 600
+    interval: 3600
     proxy: DIRECT
     behavior: classical
     format: text
@@ -89,7 +89,7 @@ rule-providers:
     type: http
     path: ./rule1/ChinaMedia.list
     url: "https://raw.staticdn.net/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list"
-    interval: 600
+    interval: 3600
     proxy: DIRECT
     behavior: classical
     format: text
@@ -98,7 +98,7 @@ rule-providers:
     type: http
     path: ./rule1/BanAD.list
     url: "https://raw.staticdn.net/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
-    interval: 600
+    interval: 3600
     proxy: DIRECT
     behavior: classical
     format: text
@@ -107,7 +107,7 @@ rule-providers:
     type: http
     path: ./rule1/BanProgramAD.list
     url: "https://raw.staticdn.net/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
-    interval: 600
+    interval: 3600
     proxy: DIRECT
     behavior: classical
     format: text
@@ -116,7 +116,7 @@ rule-providers:
     type: http
     path: ./rule1/ChinaCompanyIp.list
     url: "https://raw.staticdn.net/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list"
-    interval: 600
+    interval: 3600
     proxy: DIRECT
     behavior: classical
     format: text
@@ -125,7 +125,7 @@ rule-providers:
     type: http
     path: ./rule1/ChinaIp.list
     url: "https://raw.staticdn.net/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list"
-    interval: 600
+    interval: 3600
     proxy: DIRECT
     behavior: classical
     format: text
