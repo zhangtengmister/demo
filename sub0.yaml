@@ -19,7 +19,7 @@ proxy-providers:
 proxy-groups:
   # 手动选择国家或地区节点；根据“国家或地区策略组”名称对 `proxies` 值进行增删改，须一一对应
 #  - {name: 🚀 节点选择, type: select, proxies: [🇭🇰 香港节点, 🇹🇼 台湾节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点]}
-  - {name: 🚀 节点选择, type: select, include-all-providers: true, proxies: [🚀 自动选择, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇦🇺 澳大利亚, 🇪🇷 法国节点, 🇩🇪 德国节点, 🇬🇧 英国节点]}
+  - {name: 🚀 节点选择, type: select, include-all-providers: true, proxies: [🚀 自动选择, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇦🇺 澳大利亚, 🇪🇷 法国节点, 🇩🇪 德国节点, 🇬🇧 英国节点], url: 'http://www.gstatic.com/generate_204', interval: 600}
   - {name: 🚀 自动选择, type: url-test, include-all-providers: true, url: 'http://www.gstatic.com/generate_204', interval: 600 }
   # 若机场的 UDP 质量不是很好，导致某游戏无法登录或进入房间，可以添加 `disable-udp: true` 配置项解决
   - {name: 🐟 漏网之鱼, type: select, proxies: [🚀 节点选择, 🎯 全球直连]}
@@ -40,14 +40,14 @@ proxy-groups:
   # 节点负载均衡，即将请求均匀分配到多个节点上，优点是更稳定，速度可能有提升；将相同顶级域名的请求分配给策略组内的同一个代理节点；推荐在节点复用比较多的情况下使用
   - {name: 🇹🇼 台湾节点, type: load-balance, strategy: consistent-hashing, include-all-providers: true, filter: "(?i)台|tw|taiwan"}
   # 若有多个机场，可以使用 `include-all-providers: true` 代替 `use: [🛫 我的机场 1, 🛫 我的机场 2, ...]`
-  - {name: 🇯🇵 日本节点, type: url-test, tolerance: 100, include-all-providers: true, filter: "(?i)日本|jp|japan"}
-  - {name: 🇰🇷 韩国节点, type: url-test, tolerance: 100, include-all-providers: true, filter: "(?i)韩国|kr|Korea"}
-  - {name: 🇸🇬 新加坡节点, type: url-test, tolerance: 100, include-all-providers: true, filter: "(?i)新|sg|singapore"}
-  - {name: 🇺🇸 美国节点, type: url-test, tolerance: 300, include-all-providers: true, filter: "(?i)美|us|unitedstates|united states"}
-  - {name: 🇦🇺 澳大利亚, type: url-test, tolerance: 300, include-all-providers: true, filter: "(?i)澳大利亚|au|Australia"}
-  - {name: 🇪🇷 法国节点, type: url-test, tolerance: 300, include-all-providers: true, filter: "(?i)法国|fr|France"}
-  - {name: 🇩🇪 德国节点, type: url-test, tolerance: 300, include-all-providers: true, filter: "(?i)德国|de|Germany"}
-  - {name: 🇬🇧 英国节点, type: url-test, tolerance: 300, include-all-providers: true, filter: "(?i)英国|Gbr"}
+  - {name: 🇯🇵 日本节点, type: url-test, tolerance: 50, include-all-providers: true, filter: "(?i)日本|jp|japan"}
+  - {name: 🇰🇷 韩国节点, type: url-test, tolerance: 50, include-all-providers: true, filter: "(?i)韩国|kr|Korea"}
+  - {name: 🇸🇬 新加坡节点, type: url-test, tolerance: 50, include-all-providers: true, filter: "(?i)新|sg|singapore"}
+  - {name: 🇺🇸 美国节点, type: url-test, tolerance: 50, include-all-providers: true, filter: "(?i)美|us|unitedstates|united states"}
+  - {name: 🇦🇺 澳大利亚, type: url-test, tolerance: 50, include-all-providers: true, filter: "(?i)澳大利亚|au|Australia"}
+  - {name: 🇪🇷 法国节点, type: url-test, tolerance: 50, include-all-providers: true, filter: "(?i)法国|fr|France"}
+  - {name: 🇩🇪 德国节点, type: url-test, tolerance: 50, include-all-providers: true, filter: "(?i)德国|de|Germany"}
+  - {name: 🇬🇧 英国节点, type: url-test, tolerance: 50, include-all-providers: true, filter: "(?i)英国|Gbr"}
 #  - {name: 所有节点, type: url-test, tolerance: 50, include-all-providers: true,}
 
 # 规则集（yaml 文件每天自动更新）
