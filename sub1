@@ -58,6 +58,15 @@ rule-providers:
     behavior: classical
     format: text
 
+  Customize:
+    type: http
+    path: ./rule1/Customize.list
+    url: "https://raw.staticdn.net/zhangtengmister/demo/main/Customize.list"
+    interval: 300
+    proxy: DIRECT
+    behavior: classical
+    format: text
+
   UnBan:
     type: http
     path: ./rule1/UnBan.list
@@ -112,7 +121,7 @@ rule-providers:
     behavior: classical
     format: text
 
-  ChinaIpP:
+  ChinaIp:
     type: http
     path: ./rule1/ChinaIp.list
     url: "https://raw.staticdn.net/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list"
@@ -121,27 +130,20 @@ rule-providers:
     behavior: classical
     format: text
 
-  Customize:
-    type: http
-    path: ./rule1/Customize.list
-    url: "https://raw.staticdn.net/zhangtengmister/demo/main/Customize.list"
-    interval: 600
-    proxy: DIRECT
-    behavior: classical
-    format: text
-
 # 规则
 rules:
-  - RULE-SET,ChinaIpP,🎯 全球直连
-  - RULE-SET,ChinaCompanyIp,🎯 全球直连
-  - RULE-SET,BanProgramAD,🎯 全球直连
-  - RULE-SET,BanAD,🎯 全球直连
-  - RULE-SET,ChinaMedia,🎯 全球直连
-  - RULE-SET,UnBan,🎯 全球直连
-  - RULE-SET,LocalAreaNetwork,🎯 全球直连
-  - RULE-SET,GoogleCNProxyIP,🚀 节点选择,no-resolve
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🚀 节点选择
   - DOMAIN-SUFFIX,services.googleapis.cn,🚀 节点选择
+  - RULE-SET,GoogleCNProxyIP,🚀 节点选择,no-resolve
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,Customize,🎯 全球直连
+  - RULE-SET,UnBan,🎯 全球直连
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaMedia,🎯 全球直连
+  - RULE-SET,BanAD,🎯 全球直连
+  - RULE-SET,BanProgramAD,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - RULE-SET,ChinaIp,🎯 全球直连
   - GEOIP,CN,DIRECT,no-resolve
   - MATCH,🚀 节点选择
 #  - RULE-SET,ads,🛑 广告拦截
