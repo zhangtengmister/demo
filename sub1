@@ -61,7 +61,7 @@ rule-providers:
   Customize:
     type: http
     path: ./rule1/Customize.list
-    url: "https://raw.gitmirror.com/zhangtengmister/demo/main/Customize.list?token=GHSAT0AAAAAACR3BCDFHSF5NIO3F3353RV2ZR3DGVQ"
+    url: "https://raw.staticdn.net/zhangtengmister/demo/main/Customize.list"
     interval: 300
     proxy: DIRECT
     behavior: classical
