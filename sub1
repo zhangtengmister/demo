@@ -143,7 +143,7 @@ rule-providers:
     format: text
 
 # 规则
-#rules:
+rules:
 #  - RULE-SET,ads,🛑 广告拦截
   # 若使用 ShellCrash，由于无法判断本机进程（默认 `find-process-mode: off`），需删除此条 `RULE-SET`
 #  - RULE-SET,applications,🖥️ 直连软件
