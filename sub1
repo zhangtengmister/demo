@@ -49,6 +49,15 @@ rule-providers:
     behavior: classical
     format: text
 
+  Microsoft:
+    type: http
+    path: ./rule1/GoogleCNProxyIP.list
+    url: "https://raw.staticdn.net/ACL4SSR/ACL4SSR/blob/master/Clash/Microsoft.list"
+    interval: 3600
+    proxy: DIRECT
+    behavior: classical
+    format: text
+
   LocalAreaNetwork:
     type: http
     path: ./rule1/LocalAreaNetwork.list
@@ -130,11 +139,21 @@ rule-providers:
     behavior: classical
     format: text
 
+  ChinaIpV6:
+    type: http
+    path: ./rule1/ChinaIp.list
+    url: "https://raw.staticdn.net/ACL4SSR/ACL4SSR/blob/master/Clash/ChinaIpV6.list"
+    interval: 3600
+    proxy: DIRECT
+    behavior: classical
+    format: text
+
 # 规则
 rules:
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🚀 节点选择,no-resolve
   - DOMAIN-SUFFIX,services.googleapis.cn,🚀 节点选择,no-resolve
   - RULE-SET,GoogleCNProxyIP,🚀 节点选择,no-resolve
+  - RULE-SET,Microsoft,🎯 全球直连,no-resolve
   - RULE-SET,LocalAreaNetwork,🎯 全球直连,no-resolve
   - RULE-SET,Customize,🎯 全球直连,no-resolve
   - RULE-SET,UnBan,🎯 全球直连,no-resolve
@@ -144,6 +163,7 @@ rules:
   - RULE-SET,BanProgramAD,🎯 全球直连,no-resolve
   - RULE-SET,ChinaCompanyIp,🎯 全球直连,no-resolve
   - RULE-SET,ChinaIp,🎯 全球直连,no-resolve
+  - RULE-SET,ChinaIpV6,🎯 全球直连,no-resolve
   - GEOIP,CN,DIRECT,no-resolve
   - MATCH,🚀 节点选择
 #  - RULE-SET,ads,🛑 广告拦截
