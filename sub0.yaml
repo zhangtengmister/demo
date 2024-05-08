@@ -131,7 +131,7 @@ rule-providers:
     behavior: domain
     format: text
     path: ./rules/Customize.list
-    url: "https://raw.githubusercontent.com/zhangtengmister/demo/main/Customize.list"
+    url: "https://raw.gitmirror.com/zhangtengmister/demo/main/Customize.list"
     interval: 300
 
 # 规则
