@@ -52,88 +52,14 @@ proxy-groups:
 
 # 规则集（yaml 文件每天自动更新）
 rule-providers:
-  ads:
+  google:
     type: http
-    behavior: domain
-    format: text
-    path: ./rules/ads.list
-    url: "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/clash-ruleset/ads.list"
-    interval: 86400
-
-  # 若使用 ShellCrash，由于无法判断本机进程（默认 `find-process-mode: off`），需删除此条 `applications`
-  applications:
-    type: http
+    path: ./rule1.yaml 
+    url: "https://raw.githubusercontent.com/../Google.yaml"
+    interval: 600
+    proxy: DIRECT
     behavior: classical
-    format: text
-    path: ./rules/applications.list
-    url: "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/clash-ruleset/applications.list"
-    interval: 86400
-
-  private:
-    type: http
-    behavior: domain
-    format: text
-    path: ./rules/private.list
-    url: "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/clash-ruleset/private.list"
-    interval: 86400
-
-  ai:
-    type: http
-    behavior: domain
-    format: text
-    path: ./rules/ai.list
-    url: "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/clash-ruleset/ai.list"
-    interval: 86400
-
-  networktest:
-    type: http
-    behavior: classical
-    format: text
-    path: ./rules/networktest.list
-    url: "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/clash-ruleset/networktest.list"
-    interval: 86400
-
-  proxy:
-    type: http
-    behavior: domain
-    format: text
-    path: ./rules/proxy.list
-    url: "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/clash-ruleset/proxy.list"
-    interval: 86400
-
-  cn:
-    type: http
-    behavior: domain
-    format: text
-    path: ./rules/cn.list
-    url: "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/clash-ruleset/cn.list"
-    interval: 86400
-
-  privateip:
-    type: http
-    behavior: ipcidr
-    format: text
-    path: ./rules/privateip.list
-    url: "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/clash-ruleset/privateip.list"
-    interval: 86400
-
-  cnip:
-    type: http
-    behavior: ipcidr
-    format: text
-    path: ./rules/cnip.list
-    url: "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/clash-ruleset/cnip.list"
-    interval: 86400
-    
-#GitHub自定义域名表
-  Customize:
-    type: http
-    behavior: domain
-    format: text
-    path: ./rules/Customize.list
-    url: "https://raw.gitmirror.com/zhangtengmister/demo/main/Customize.list"
-    interval: 300
-
+    format: yaml
 # 规则
 rules:
   - RULE-SET,ads,🛑 广告拦截
