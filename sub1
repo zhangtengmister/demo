@@ -52,26 +52,108 @@ proxy-groups:
 
 # 规则集（yaml 文件每天自动更新）
 rule-providers:
-  google:
+  GoogleCNProxyIP:
     type: http
-    path: ./rule1.yaml 
-    url: "https://raw.githubusercontent.com/../Google.yaml"
+    path: ./rule1/GoogleCNProxyIP.list
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleCNProxyIP.list"
     interval: 600
     proxy: DIRECT
     behavior: classical
-    format: yaml
+    format: text
+
+  LocalAreaNetwork:
+    type: http
+    path: ./rule1/LocalAreaNetwork.list
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list"
+    interval: 600
+    proxy: DIRECT
+    behavior: classical
+    format: text
+
+  UnBan:
+    type: http
+    path: ./rule1/UnBan.list
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list"
+    interval: 600
+    proxy: DIRECT
+    behavior: classical
+    format: text
+
+  ChinaDomain:
+    type: http
+    path: ./rule1/ChinaDomain.list
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list"
+    interval: 600
+    proxy: DIRECT
+    behavior: classical
+    format: text
+
+  ChinaMedia:
+    type: http
+    path: ./rule1/ChinaMedia.list
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list"
+    interval: 600
+    proxy: DIRECT
+    behavior: classical
+    format: text
+
+  BanAD:
+    type: http
+    path: ./rule1/BanAD.list
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
+    interval: 600
+    proxy: DIRECT
+    behavior: classical
+    format: text
+
+  BanProgramAD:
+    type: http
+    path: ./rule1/BanProgramAD.list
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
+    interval: 600
+    proxy: DIRECT
+    behavior: classical
+    format: text
+
+  ChinaCompanyIp:
+    type: http
+    path: ./rule1/ChinaCompanyIp.list
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list"
+    interval: 600
+    proxy: DIRECT
+    behavior: classical
+    format: text
+
+  ChinaIpP:
+    type: http
+    path: ./rule1/ChinaIp.listt
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.listt"
+    interval: 600
+    proxy: DIRECT
+    behavior: classical
+    format: text
+
+  Customize:
+    type: http
+    path: ./rule1/Customize.list
+    url: "https://raw.staticdn.net/zhangtengmister/demo/main/Customize.list"
+    interval: 600
+    proxy: DIRECT
+    behavior: classical
+    format: text
+
 # 规则
-rules:
-  - RULE-SET,ads,🛑 广告拦截
+#rules:
+#  - RULE-SET,ads,🛑 广告拦截
   # 若使用 ShellCrash，由于无法判断本机进程（默认 `find-process-mode: off`），需删除此条 `RULE-SET`
-  - RULE-SET,applications,🖥️ 直连软件
+#  - RULE-SET,applications,🖥️ 直连软件
   # 为过滤 P2P 流量（BT 下载），可添加一条 `DST-PORT` 规则（ShellCrash 会默认开启“只代理常用端口”，可忽略此项）
-  - DST-PORT,6881-6889,🎯 全球直连
-  - RULE-SET,private,🔒 私有网络
-  - RULE-SET,ai,🤖 人工智能
-  - RULE-SET,networktest,📈 网络测试
-  - RULE-SET,cn,🇨🇳 直连域名
-  - RULE-SET,Customize,🇨🇳 直连域名
-  - RULE-SET,privateip,🔒 私有网络,no-resolve
-  - RULE-SET,cnip,🇨🇳 直连 IP
-  - MATCH,🐟 漏网之鱼
+#  - DST-PORT,6881-6889,🎯 全球直连
+#  - RULE-SET,private,🔒 私有网络
+#  - RULE-SET,ai,🤖 人工智能
+#  - RULE-SET,networktest,📈 网络测试
+#  - RULE-SET,cn,🇨🇳 直连域名
+#  - RULE-SET,Customize,🇨🇳 直连域名
+#  - RULE-SET,privateip,🔒 私有网络,no-resolve
+#  - RULE-SET,cnip,🇨🇳 直连 IP
+#  - MATCH,🐟 漏网之鱼
