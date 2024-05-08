@@ -1,4 +1,5 @@
-#路由规则说明文档：https://wiki.metacubex.one/config/rule-providers/
+# 路由规则说明文档：https://wiki.metacubex.one/config/rule-providers/
+# classical text 格式
 DOMAIN-SUFFIX,NISUS-APYD.COM,DIRECT
 DOMAIN-SUFFIX,NISUS-APYD.COM.CN,DIRECT
 DOMAIN-SUFFIX,NISUS-TECH.COM,DIRECT
