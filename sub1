@@ -55,7 +55,7 @@ rule-providers:
   GoogleCNProxyIP:
     type: http
     path: ./rule1/GoogleCNProxyIP.list
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleCNProxyIP.list"
+    url: "https://raw.staticdn.net/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleCNProxyIP.list"
     interval: 600
     proxy: DIRECT
     behavior: classical
