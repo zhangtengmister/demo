@@ -132,18 +132,18 @@ rule-providers:
 
 # 规则
 rules:
-  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🚀 节点选择
-  - DOMAIN-SUFFIX,services.googleapis.cn,🚀 节点选择
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🚀 节点选择,no-resolve
+  - DOMAIN-SUFFIX,services.googleapis.cn,🚀 节点选择,no-resolve
   - RULE-SET,GoogleCNProxyIP,🚀 节点选择,no-resolve
-  - RULE-SET,LocalAreaNetwork,🎯 全球直连
-  - RULE-SET,Customize,🎯 全球直连
-  - RULE-SET,UnBan,🎯 全球直连
-  - RULE-SET,ChinaDomain,🎯 全球直连
-  - RULE-SET,ChinaMedia,🎯 全球直连
-  - RULE-SET,BanAD,🎯 全球直连
-  - RULE-SET,BanProgramAD,🎯 全球直连
-  - RULE-SET,ChinaCompanyIp,🎯 全球直连
-  - RULE-SET,ChinaIp,🎯 全球直连
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连,no-resolve
+  - RULE-SET,Customize,🎯 全球直连,no-resolve
+  - RULE-SET,UnBan,🎯 全球直连,no-resolve
+  - RULE-SET,ChinaDomain,🎯 全球直连,no-resolve
+  - RULE-SET,ChinaMedia,🎯 全球直连,no-resolve
+  - RULE-SET,BanAD,🎯 全球直连,no-resolve
+  - RULE-SET,BanProgramAD,🎯 全球直连,no-resolve
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连,no-resolve
+  - RULE-SET,ChinaIp,🎯 全球直连,no-resolve
   - GEOIP,CN,DIRECT,no-resolve
   - MATCH,🚀 节点选择
 #  - RULE-SET,ads,🛑 广告拦截
