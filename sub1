@@ -4,7 +4,7 @@ proxy-providers:
     type: http
     # 机场订阅链接，使用 Clash 链接
     url: "https://platform.djjc.cfd/api/v1/client/subscribe?token=61c90a3afcc0cda89417aff99785431b&flag=meta"
-    path: ./proxies/wdjc1.yaml
+    path: ./proxy_provider/wdjc1.yaml
     interval: 86400
     # 初步筛选需要的节点，可有效减轻路由器压力，支持正则表达式，不筛选可删除此配置项
     #filter: "(?i)港|hk|hongkong|hong kong|台|tw|taiwan|日本|jp|japan|新|sg|singapore|美|us|unitedstates|united states"
@@ -42,7 +42,7 @@ proxy-groups:
 rule-providers:
   GoogleCNProxyIP:
     type: http
-    path: ./rule1/GoogleCNProxyIP.list
+    path: ./rule_provider/GoogleCNProxyIP.list
     url: "https://raw.staticdn.net/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleCNProxyIP.list"
     interval: 3600
     proxy: DIRECT
@@ -51,7 +51,7 @@ rule-providers:
 
   Microsoft:
     type: http
-    path: ./rule1/GoogleCNProxyIP.list
+    path: ./rule_provider/GoogleCNProxyIP.list
     url: "https://raw.staticdn.net/ACL4SSR/ACL4SSR/blob/master/Clash/Microsoft.list"
     interval: 3600
     proxy: DIRECT
@@ -60,7 +60,7 @@ rule-providers:
 
   LocalAreaNetwork:
     type: http
-    path: ./rule1/LocalAreaNetwork.list
+    path: ./rule_provider/LocalAreaNetwork.list
     url: "https://raw.staticdn.net/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list"
     interval: 3600
     proxy: DIRECT
@@ -69,7 +69,7 @@ rule-providers:
 
   Customize:
     type: http
-    path: ./rule1/Customize.list
+    path: ./rule_provider/Customize.list
     url: "https://raw.staticdn.net/zhangtengmister/demo/main/Customize.list"
     interval: 300
     proxy: DIRECT
@@ -78,7 +78,7 @@ rule-providers:
 
   UnBan:
     type: http
-    path: ./rule1/UnBan.list
+    path: ./rule_provider/UnBan.list
     url: "https://raw.staticdn.net/ACL4SSR/ACL4SSR/master/Clash/UnBan.list"
     interval: 3600
     proxy: DIRECT
@@ -87,7 +87,7 @@ rule-providers:
 
   ChinaDomain:
     type: http
-    path: ./rule1/ChinaDomain.list
+    path: ./rule_provider/ChinaDomain.list
     url: "https://raw.staticdn.net/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list"
     interval: 3600
     proxy: DIRECT
@@ -96,7 +96,7 @@ rule-providers:
 
   ChinaMedia:
     type: http
-    path: ./rule1/ChinaMedia.list
+    path: ./rule_provider/ChinaMedia.list
     url: "https://raw.staticdn.net/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list"
     interval: 3600
     proxy: DIRECT
@@ -105,7 +105,7 @@ rule-providers:
 
   BanAD:
     type: http
-    path: ./rule1/BanAD.list
+    path: ./rule_provider/BanAD.list
     url: "https://raw.staticdn.net/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
     interval: 3600
     proxy: DIRECT
@@ -114,7 +114,7 @@ rule-providers:
 
   BanProgramAD:
     type: http
-    path: ./rule1/BanProgramAD.list
+    path: ./rule_provider/BanProgramAD.list
     url: "https://raw.staticdn.net/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
     interval: 3600
     proxy: DIRECT
@@ -123,7 +123,7 @@ rule-providers:
 
   ChinaCompanyIp:
     type: http
-    path: ./rule1/ChinaCompanyIp.list
+    path: ./rule_provider/ChinaCompanyIp.list
     url: "https://raw.staticdn.net/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list"
     interval: 3600
     proxy: DIRECT
@@ -132,7 +132,7 @@ rule-providers:
 
   ChinaIp:
     type: http
-    path: ./rule1/ChinaIp.list
+    path: ./rule_provider/ChinaIp.list
     url: "https://raw.staticdn.net/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list"
     interval: 3600
     proxy: DIRECT
@@ -141,7 +141,7 @@ rule-providers:
 
   ChinaIpV6:
     type: http
-    path: ./rule1/ChinaIp.list
+    path: ./rule_provider/ChinaIp.list
     url: "https://raw.staticdn.net/ACL4SSR/ACL4SSR/blob/master/Clash/ChinaIpV6.list"
     interval: 3600
     proxy: DIRECT
