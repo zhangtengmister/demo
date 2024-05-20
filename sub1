@@ -52,8 +52,8 @@ rule-providers:
 
   Microsoft:
     type: http
-    path: ./rule_provider/GoogleCNProxyIP.list
-    url: "https://raw.staticdn.net/ACL4SSR/ACL4SSR/blob/master/Clash/Microsoft.list"
+    path: ./rule_provider/Microsoft.list
+    url: "https://raw.gitmirror.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list"
     interval: 3600
     proxy: DIRECT
     behavior: classical
