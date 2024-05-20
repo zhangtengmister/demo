@@ -36,6 +36,7 @@ proxy-groups:
   - {name: 🇪🇷 法国节点, type: url-test, tolerance: 50, include-all-providers: true, filter: "(?i)法国|fr|France"}
   - {name: 🇩🇪 德国节点, type: url-test, tolerance: 50, include-all-providers: true, filter: "(?i)德国|de|Germany"}
   - {name: 🇬🇧 英国节点, type: url-test, tolerance: 50, include-all-providers: true, filter: "(?i)英国|Gbr"}
+  - {name: 🇮🇳 印度节点, type: url-test, tolerance: 50, include-all-providers: true, filter: "(?i)印度|in"}
 #  - {name: 所有节点, type: url-test, tolerance: 50, include-all-providers: true,}
 
 # 规则集（text 文件每天自动更新）https://wiki.metacubex.one/config/rule-providers/
